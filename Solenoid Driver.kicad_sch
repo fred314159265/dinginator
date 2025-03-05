@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "bdbaf995-1603-4fc7-b15b-c9c1f159fca3")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -79,7 +81,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -91,7 +93,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -140,6 +142,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Driver_Motor:DRV8837"
 			(exclude_from_sim no)
@@ -220,6 +223,78 @@
 				)
 			)
 			(symbol "DRV8837_1_1"
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "~{SLEEP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "IN1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "IN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 12.7 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin power_in line
 					(at 0 12.7 270)
 					(length 2.54)
@@ -231,6 +306,43 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -274,116 +386,81 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -12.7 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 -2.54 0)
-					(length 2.54)
-					(name "IN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "IN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "~{SLEEP}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 12.7 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -12.7 90)
-					(length 2.54) hide
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 224.79 115.57)
+		(end 280.67 161.29)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 6fea7546-a506-41fc-a4a6-4ad632af748b)
+	)
+	(text "Motor output"
+		(exclude_from_sim no)
+		(at 175.26 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
 		)
+		(uuid "268a2e95-46e6-40b7-b63f-e2bc7caa1fb4")
+	)
+	(text "0 V to 11 V"
+		(exclude_from_sim no)
+		(at 161.29 75.565 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "546b0658-3eba-4ac8-b8b3-2b8d45b0da46")
+	)
+	(text "Decoupling"
+		(exclude_from_sim no)
+		(at 253.365 118.745 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+		)
+		(uuid "8992d09f-3567-46bd-915d-88f24d52936c")
+	)
+	(text "1.8 V to 7 V"
+		(exclude_from_sim no)
+		(at 140.335 75.565 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "af4c2fe8-5691-40a3-b50b-6e82dc04d37e")
+	)
+	(text_box "Sleep mode input\nWhen this pin is in logic low, the device enters low-power sleep mode. The device operates\nnormally when this pin is logic high. \nInternal pulldown"
+		(exclude_from_sim no)
+		(at 82.55 88.9 0)
+		(size 35.56 16.51)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f59d3cdc-f810-49cd-9f4a-70b47abadc74")
 	)
 	(junction
 		(at 257.81 135.89)
@@ -657,81 +734,9 @@
 		)
 		(uuid "fc3cb26c-3525-492c-9810-01f49dc30b25")
 	)
-	(rectangle
-		(start 224.79 115.57)
-		(end 280.67 161.29)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 6fea7546-a506-41fc-a4a6-4ad632af748b)
-	)
-	(text_box "Sleep mode input\nWhen this pin is in logic low, the device enters low-power sleep mode. The device operates\nnormally when this pin is logic high. \nInternal pulldown"
-		(exclude_from_sim no)
-		(at 82.55 88.9 0)
-		(size 35.56 16.51)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "f59d3cdc-f810-49cd-9f4a-70b47abadc74")
-	)
-	(text "Motor output"
-		(exclude_from_sim no)
-		(at 175.26 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "268a2e95-46e6-40b7-b63f-e2bc7caa1fb4")
-	)
-	(text "0 V to 11 V"
-		(exclude_from_sim no)
-		(at 161.29 75.565 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "546b0658-3eba-4ac8-b8b3-2b8d45b0da46")
-	)
-	(text "Decoupling"
-		(exclude_from_sim no)
-		(at 253.365 118.745 0)
-		(effects
-			(font
-				(size 1.905 1.905)
-			)
-		)
-		(uuid "8992d09f-3567-46bd-915d-88f24d52936c")
-	)
-	(text "1.8 V to 7 V"
-		(exclude_from_sim no)
-		(at 140.335 75.565 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "af4c2fe8-5691-40a3-b50b-6e82dc04d37e")
-	)
 	(hierarchical_label "0V"
 		(shape input)
 		(at 257.81 154.94 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -743,7 +748,6 @@
 	(hierarchical_label "V_LOGIC"
 		(shape input)
 		(at 148.59 80.01 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -755,7 +759,6 @@
 	(hierarchical_label "V_MOTOR"
 		(shape input)
 		(at 257.81 132.08 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -767,7 +770,6 @@
 	(hierarchical_label "0V"
 		(shape input)
 		(at 152.4 114.3 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -779,7 +781,6 @@
 	(hierarchical_label "~{SLEEP}"
 		(shape input)
 		(at 134.62 96.52 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -791,7 +792,6 @@
 	(hierarchical_label "V_LOGIC"
 		(shape input)
 		(at 229.87 135.89 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -803,7 +803,6 @@
 	(hierarchical_label "IN1"
 		(shape input)
 		(at 134.62 99.06 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -815,7 +814,6 @@
 	(hierarchical_label "0V"
 		(shape input)
 		(at 229.87 151.13 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -827,7 +825,6 @@
 	(hierarchical_label "IN2"
 		(shape input)
 		(at 134.62 101.6 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -839,7 +836,6 @@
 	(hierarchical_label "V_MOTOR"
 		(shape input)
 		(at 153.67 80.01 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -851,7 +847,6 @@
 	(hierarchical_label "OUT_1"
 		(shape input)
 		(at 170.18 91.44 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -863,7 +858,6 @@
 	(hierarchical_label "OUT_2"
 		(shape input)
 		(at 170.18 106.68 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

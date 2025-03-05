@@ -1,0 +1,4 @@
+(design_block_lib_table
+  (version 7)
+  (lib (name "Dinginator")(type "KiCad")(uri "${KIPRJMOD}/Library/Design_Blocks/Dinginator.kicad_blocks")(options "")(descr ""))
+)
